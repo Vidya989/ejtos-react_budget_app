@@ -8,6 +8,7 @@ import ExpenseList from './components/ExpenseList';
 import AllocationForm from './components/AllocationForm';
 import RemainingBudget from './components/Remaining';
 
+
 const App = () => {
     return (
         <AppProvider>
@@ -23,6 +24,19 @@ const App = () => {
                     <div className='col-sm'>
                         <ExpenseTotal />
                     </div>
+                    <div className='col-sm'>
+                        <div className='alert alert-secondary'>
+                            <div className='cur-st'>
+                            <select className="custom-select" id="CurrencySelector" style={{backgroundColor:'lightgreen' }}>
+                                <option defaultValue>Currency (£ Pound)</option>
+                                <option value="Dollar" name="dollar">$ Dollar</option>
+                                <option value="Pound" name="pound">£ Pound</option>
+                                <option value="Euro" name="euro">€ Euro </option>
+                                <option value="Rupee" name="rupee">₹ Rupee</option>
+                            </select> 
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <h3 className='mt-3'>Allocation</h3>
                 <div className='row '>
@@ -37,6 +51,7 @@ const App = () => {
                     </div>
                 </div>
             </div>
+            
         </AppProvider>
     );
 };
